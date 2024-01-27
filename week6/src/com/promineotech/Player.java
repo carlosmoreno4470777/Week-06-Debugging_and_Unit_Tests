@@ -21,43 +21,34 @@ public class Player {
     private int score = 0;
     private String name="";
   
-    /**
-	 * @return the hand
-	 */
 	public List<Card> getHand() {
 		return hand;
 	}
 
-	/**
-	 * @param hand the hand to set
-	 */
 	public void setHand(List<Card> hand) {
 		this.hand = hand;
 	}
 
-	/**
-	 * @return the name
-	 */
 	public String getName() {
 		return name;
 	}
 
-	/**
-	 * @param name the name to set
-	 */
+
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	/**
-	 * @param score the score to set
-	 */
+
 	public void setScore(int score) {
 		this.score = score;
 	}
 
 	public Player(String name) {
         this.name = name;
+    }
+	
+    public int getScore() {
+        return score;
     }
 
     public Player() {
@@ -68,10 +59,6 @@ public class Player {
 	//1. describe (prints out information about the player and calls the describe
 	//method for each card in the Hand List)
 	public void describe() {
-        //System.out.println("Player " + name + "'s hand:");
-		/*
-		 * for (Card card : hand) { card.describe(); }
-		 */
         
         for (int i = 0; i < hand.size(); i++) {
             Card card = hand.get(i);
@@ -79,20 +66,20 @@ public class Player {
         }
     }
 
+	//2. flip (removes and returns the top card of the Hand)
     public Card flip() {
         return hand.remove(0);
     }
-
+    
+	//3. draw (takes a Deck as an argument and calls the draw method on the deck,
+	//adding the returned Card to the hand field)
     public void draw(Deck deck) {
         hand.add(deck.draw());
     }
-
+    
+	//4. incrementScore (adds 1 to the Player’s score field)
     public void incrementScore() {
         score++;
-    }
-
-    public int getScore() {
-        return score;
     }
 
 	

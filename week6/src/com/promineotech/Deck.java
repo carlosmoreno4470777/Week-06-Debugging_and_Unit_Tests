@@ -35,11 +35,6 @@ public class Deck {
     }
    
     private int getNumberOfCard(String numbers) {
-		/*
-		 * switch (numbers) { case "Ace": return 14; case "Jack": return 11; case
-		 * "Queen": return 12; case "King": return 13; default: //convert the input of
-		 * the string value into an intger number return Integer.parseInt(numbers); }
-		 */
         
         if(numbers == "Ace")
         {
@@ -59,31 +54,21 @@ public class Deck {
         }
         else
         {
-        	//convert the input of the string value into an intger number
+        	//convert the input of the string value into an integer number
             return Integer.parseInt(numbers);
         }
-        
-        
+         
     }
 	
 
-	/**
-	 * @return the cards
-	 */
 	public List<Card> getCards() {
 		return cards;
 	}
 
-	/**
-	 * @param cards the cards to set
-	 */
 	public void setCards(List<Card> cards) {
 		this.cards = cards;
 	}
 	
-	/*
-	 * public void describe() { for (Card card : this.cards) { card.describe(); } }
-	 */
 	
 	//	1. shuffle (randomizes the order of the cards)
 	public void shuffle() {
@@ -96,6 +81,5 @@ public class Deck {
 	}
 	
 	
-
 	
 }

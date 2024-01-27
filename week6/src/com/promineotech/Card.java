@@ -24,27 +24,21 @@ public class Card {
         this.name = name;
     }
 	
-	/**
-	 * @return the value
-	 */
 	public int getValue() {
 		return value;
 	}
-	/**
-	 * @param value the value to set
-	 */
+
+
 	public void setValue(int value) {
 		this.value = value;
 	}
-	/**
-	 * @return the name
-	 */
+
+
 	public String getName() {
 		return name;
 	}
-	/**
-	 * @param name the name to set
-	 */
+
+
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -52,9 +46,7 @@ public class Card {
 	public void describe() {
 		System.out.println("name: " + this.name);
 		System.out.println("value: " + this.value);
-		
-		//System.out.println(this.name + " of " + this.value);
-		
+				
 	}
 	
 }
